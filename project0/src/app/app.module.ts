@@ -6,9 +6,9 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AsteroidFastestComponent } from './components/asteroid-fastest/asteroid-fastest.component';
 import { HeaderbarComponent } from './components/shared/headerbar/headerbar.component';
-import { HomeComponent } from './home/home.component';
-import { AsteroidDetailsComponent } from './asteroid-details/asteroid-details.component';
-import { ListAsteroidsComponent } from './list-asteroids/list-asteroids.component';
+import { HomeComponent } from './components/home/home.component';
+import { AsteroidDetailsComponent } from './components/asteroid-details/asteroid-details.component';
+import { ListAsteroidsComponent } from './components/list-asteroids/list-asteroids.component';
 
 @NgModule({
   declarations: [
