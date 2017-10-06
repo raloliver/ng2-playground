@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-asteroid-details',
+  selector: 'asteroid-details',
   templateUrl: './asteroid-details.component.html'  
 })
 export class AsteroidDetailsComponent implements OnInit {

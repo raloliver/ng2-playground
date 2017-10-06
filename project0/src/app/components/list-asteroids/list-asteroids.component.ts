@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-list-asteroids',
+  selector: 'list-asteroids',
   templateUrl: './list-asteroids.component.html'  
 })
 export class ListAsteroidsComponent implements OnInit {
