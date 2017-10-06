@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { AsteroidFastestComponent } from './components/asteroid-fastest/asteroid-fastest.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AsteroidFastestComponent
   ],
   imports: [
     BrowserModule,
