@@ -1,15 +1,21 @@
+//importação
 import { Component, OnInit } from '@angular/core';
 
+//definição
 @Component({
-  selector: 'app-asteroid-fastest',
-  templateUrl: './asteroid-fastest.component.html',
-  styleUrls: ['./asteroid-fastest.component.css']
+  selector: 'asteroid-fastest', //<asteroid-fastest></asteroid-fastest>
+  templateUrl: './asteroid-fastest.component.html'  
 })
+
+//exportação
 export class AsteroidFastestComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    console.info('on constructor...')
+  }
 
   ngOnInit() {
+    console.info('on OnInit()...')
   }
 
 }
