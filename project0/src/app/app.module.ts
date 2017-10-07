@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { routing, appRoutingProviders } from './app.rounting';
 
 import { AsteroidFastestComponent } from './components/asteroid-fastest/asteroid-fastest.component';
 import { HeaderbarComponent } from './components/shared/headerbar/headerbar.component';
@@ -22,7 +23,8 @@ import { HomePage } from './pages/home-page/home-page';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule, 
+    routing
   ],
   providers: [],
   bootstrap: [HomePage]
