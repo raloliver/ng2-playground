@@ -1,3 +1,25 @@
-<ul>
-  <li *ngFor="let asteroid of asteroids">{{asteroid.title}}</li>
-</ul>
+<div class="container-fluid">
+  <table class="table table-striped hidden-xs">
+    <thead>
+      <tr>
+        <th class="text-center">Usuário</th>
+        <th class="text-center">Título</th>
+        <th class="text-center">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let asteroid of asteroids">
+        <td class="text-center">{{ asteroid.userId }}</td>
+        <td><a routerLink="/asteroids/details/{{ asteroid.id }}">{{ asteroid.title }}</a></td>
+        <td class="text-center">{{ asteroid.completed }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="list-group visible-xs">
+    <a routerLink="/asteroids/details/{{ asteroid.id }}" class="list-group-item" *ngFor="let asteroid of asteroids">
+      <h5 class="list-group-item-heading">{{ asteroid.id }}</h5>
+      <p class="list-group-item-text">{{ asteroid.title }}</p>
+    </a>
+  </div>
+</div>

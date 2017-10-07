@@ -1,3 +1,15 @@
-<p>
-  asteroid-details works!
-</p>
+<div class="container">
+    <h3 class="text-center">
+        {{ asteroid.id }} {{ asteroid.title }} <br>
+        <small>{{ asteroid.userId }}</small>
+    </h3>
+    <hr>
+    <!-- filtro de html (caso o valor seja HTML) -->
+    <div [innerHTML]="asteroid.title"></div>
+    <hr>
+    <ul class="list-unstyled">
+        <li><strong>Usuário:</strong> {{ asteroid.userId }}</li>
+        <li><strong>Status:</strong> {{ asteroid.completed }}</li>
+        <li><strong>Título:</strong> {{ asteroid.title }}</li>
+    </ul>
+</div>
