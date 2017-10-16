@@ -6,7 +6,7 @@ export class DataService {
   //properties
   wikis: Wiki[];
 
-  //functions
+  //methods
   constructor() {
     this.wikis = [
       {
@@ -27,7 +27,7 @@ export class DataService {
     ]
   }
 
-  //methods
+  //functions
   getWikis() {
     return this.wikis;
   }

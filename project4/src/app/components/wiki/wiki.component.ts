@@ -8,6 +8,7 @@ import { Wiki } from "../../models/Wiki";
   styleUrls: ['./wiki.component.scss']
 })
 export class WikiComponent implements OnInit {
+  //events
   @Input('wiki') wiki: Wiki ;
 
   constructor() { }

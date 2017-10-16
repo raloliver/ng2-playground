@@ -12,7 +12,7 @@ export class WikiListComponent implements OnInit {
   //properties with interfaces
   wikis: Wiki[];
 
-  //functions
+  //methods
   constructor(public dataService: DataService) {
 
   }
@@ -20,6 +20,11 @@ export class WikiListComponent implements OnInit {
   //init
   ngOnInit() {
     this.wikis = this.dataService.getWikis()
+  }
+
+  //functions
+  addWiki(wiki: Wiki) {
+    console.log(wiki);
   }
 
 }
