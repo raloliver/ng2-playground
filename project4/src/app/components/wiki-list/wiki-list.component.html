@@ -1,15 +1,1 @@
-<div class="wiki" *ngFor="let wiki of wikis">
-  <div class="card">
-    <div class="card-header">
-      <a href="#!" class="btn btn-link" (click)="wiki.show = !wiki.show">
-        <h5 class="mb-0">{{wiki.question}}</h5>
-      </a>
-    </div>
-    <div class="card-block" [hidden]="!wiki.show">
-      <p class="card-text">
-        <strong>{{wiki.answer}}</strong>
-      </p>
-    </div>
-  </div>
-  <br>
-</div>
+<app-wiki *ngFor="let wiki of wikis" [wiki]="wiki"></app-wiki>
