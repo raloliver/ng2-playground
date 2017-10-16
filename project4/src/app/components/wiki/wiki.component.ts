@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { Wiki } from "../../models/Wiki";
+import { DataService } from "../../services/data.service";
 
 @Component({
   selector: 'app-wiki',
@@ -9,11 +10,18 @@ import { Wiki } from "../../models/Wiki";
 })
 export class WikiComponent implements OnInit {
   //events
-  @Input('wiki') wiki: Wiki ;
+  @Input('wiki') wiki: Wiki;
 
-  constructor() { }
+  //methods
+  constructor(public dataService: DataService) { }
 
+  //init
   ngOnInit() {
+  }
+
+  //functions
+  removeWiki(wiki) {
+    this.dataService.removeWiki(wiki);
   }
 
 }

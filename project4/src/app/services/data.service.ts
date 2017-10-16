@@ -36,4 +36,12 @@ export class DataService {
     this.wikis.unshift(wiki); //unshift to add on top; push to add on bottom
   }
 
+  removeWiki(wiki: Wiki) {
+    for (let i = 0; i < this.wikis.length; i++) {
+      if (wiki == this.wikis[i]){
+        this.wikis.splice(i, 1);
+      }
+    }
+  }
+
 }
