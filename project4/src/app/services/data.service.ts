@@ -32,4 +32,8 @@ export class DataService {
     return this.wikis;
   }
 
+  addWiki(wiki: Wiki) {
+    this.wikis.unshift(wiki); //unshift to add on top; push to add on bottom
+  }
+
 }

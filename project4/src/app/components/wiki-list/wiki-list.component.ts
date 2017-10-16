@@ -24,7 +24,8 @@ export class WikiListComponent implements OnInit {
 
   //functions
   addWiki(wiki: Wiki) {
-    console.log(wiki);
+    this.dataService.addWiki(wiki);
+    //console.log(wiki);
   }
 
 }
