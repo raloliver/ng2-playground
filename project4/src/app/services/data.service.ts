@@ -66,6 +66,7 @@ export class DataService {
     for (let i = 0; i < this.wikis.length; i++) {
       if (wiki == this.wikis[i]) {
         this.wikis.splice(i, 1);
+        localStorage.setItem('wikis', JSON.stringify(this.wikis));
       }
     }
   }
