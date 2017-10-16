@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from "../../services/data.service";
+
+import { Wiki } from "../../models/Wiki";
 
 @Component({
   selector: 'app-wiki-list',
@@ -6,32 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wiki-list.component.scss']
 })
 export class WikiListComponent implements OnInit {
-  //properties
-  wikis: Object[];
+  //properties with interfaces
+  wikis: Wiki[];
 
   //functions
-  constructor() { 
-    this.wikis = [
-      {
-        question: 'Como você se chama?',
-        answer: 'Meu nome é João da Silva',
-        show: false
-      },
-      {
-        question: 'Qual a sua idade?',
-        answer: 'Eu tenho 32 anos',
-        show: false
-      },
-      {
-        question: 'Você é casado?',
-        answer: 'Sim',
-        show: false
-      }
-    ]
+  constructor(public dataService: DataService) {
+
   }
 
   //init
   ngOnInit() {
+    this.wikis = this.dataService.getWikis()
   }
 
 }

@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { WikiListComponent } from './components/wiki-list/wiki-list.component';
+import { DataService } from "./services/data.service";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { WikiListComponent } from './components/wiki-list/wiki-list.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
