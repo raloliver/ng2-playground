@@ -14,15 +14,18 @@ export class WikiListComponent implements OnInit {
     this.wikis = [
       {
         question: 'Como você se chama?',
-        answer: 'Meu nome é João da Silva'
+        answer: 'Meu nome é João da Silva',
+        show: false
       },
       {
         question: 'Qual a sua idade?',
-        answer: 'Eu tenho 32 anos'
+        answer: 'Eu tenho 32 anos',
+        show: false
       },
       {
         question: 'Você é casado?',
-        answer: 'Sim'
+        answer: 'Sim',
+        show: false
       }
     ]
   }
