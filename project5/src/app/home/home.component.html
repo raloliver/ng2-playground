@@ -3,21 +3,24 @@
     <p>O que você vai fazer em 2018?</p>
   </div>
   <div class="col">
-    <p>Essa é a sua lista de objetivos (<strong>{{ goalCount }}</strong>)</p>
+    <p>Essa é a sua lista de objetivos
+      <strong>({{ goalCount }})</strong>
+    </p>
   </div>
 </div>
 <div class="container color-light">
   <div class="col">
     <p class="sm">Use este formulário abaixo para adicionar um novo objetivo à sua vida para 2018. O que você deseja realizar neste novo
-      ano?</p>
+      ano?
+    </p>
     <form>
-      <input type="text" class="txt" name="goal" placeholder="Meta para 2018">
-      <input type="submit" class="btn" [value]="btnText">
+      <input type="text" class="txt" name="goal" placeholder="Meta para 2018" [(ngModel)]="goalText">
+      <input type="submit" class="btn" [value]="btnText" (click)="addGoal()">
     </form>
   </div>
   <div class="col">
-    <p class="goal-container">
-      Eu quero assistir a uma corrida de F1
+    <p class="goal-container" *ngFor="let goal of goals">
+      {{goal}}
     </p>
   </div>
 </div>
