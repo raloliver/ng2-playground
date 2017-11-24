@@ -8,7 +8,7 @@
     </p>
   </div>
 </div>
-<div class="container color-light">
+<div class="container color-light" [@goals]="goals.length">
   <div class="col">
     <p class="sm">Use este formulário abaixo para adicionar um novo objetivo à sua vida para 2018. O que você deseja realizar neste novo
       ano?
@@ -19,7 +19,7 @@
     </form>
   </div>
   <div class="col">
-    <p class="goal-container" *ngFor="let goal of goals">
+    <p class="goal-container" *ngFor="let goal of goals; let i = index" (click)="delGoal(i)">
       {{goal}}
     </p>
   </div>
