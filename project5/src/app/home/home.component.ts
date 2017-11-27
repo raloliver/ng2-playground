@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
 
+import { DataService } from '../data.service';
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -32,23 +35,27 @@ export class HomeComponent implements OnInit {
   goalCount: number
   btnText: string = 'Incluir na lista'
   goalText: string = 'Começar tudo isso hoje mesmo'
-  goals = ["Realizar tudo que me propor a fazer", "Definir o que de fato é importante pra mim", "Aprender a aprender"]
+  goals = []
 
 
-  constructor() { }
+  constructor(private _data: DataService) { }
 
   ngOnInit() {
     this.goalCount = this.goals.length
+    this._data.goal.subscribe(res => this.goals = res)
+    this._data.changeGoal(this.goals)
   }
 
   addGoal() {
     this.goals.unshift(this.goalText)
     this.goalText = ''
     this.goalCount = this.goals.length
+    this._data.changeGoal(this.goals)
   }
 
   delGoal(i) {
     this.goals.splice(i, 1)
+    this._data.changeGoal(this.goals)
   }
 
 }
